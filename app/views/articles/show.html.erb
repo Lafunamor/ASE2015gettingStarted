@@ -6,7 +6,21 @@
 <p>
   <strong>Text:</strong>
   <%= @article.text %>
-</p><br>
+</p>
+
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+
+
+
+<br>
+
 <button type="button" class="btn btn-default">
   <%= link_to 'Edit', edit_article_path(@article) %>
   </button>
